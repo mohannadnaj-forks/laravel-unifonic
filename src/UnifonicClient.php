@@ -116,14 +116,14 @@ class UnifonicClient implements UnifonicClientContract
     /**
      * Send a message to a recipient.
      *
-     * @param int         $recipient
+     * @param mixed         $recipient
      * @param string      $message
      *
      * @param string|null $senderID
      *
      * @return object
      */
-    public function send(int $recipient, string $message, string $senderID = null): object
+    public function send($recipient, string $message, string $senderID = null): object
     {
         return $this->postRequest(self::ENDPOINT_MESSAGES . 'Send', [
             'Recipient' => $recipient,

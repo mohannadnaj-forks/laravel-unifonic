@@ -5,7 +5,7 @@ namespace Liliom\Unifonic;
 
 interface UnifonicClientContract
 {
-    public function send(int $recipient, string $message, string $senderID = null);
+    public function send($recipient, string $message, string $senderID = null);
 
     public function sendBulk(array $recipients, string $message, string $senderID = null);
 
